@@ -32,7 +32,7 @@ export default {
                 if(status === 200) {
                     console.log(msg)
                 }else {
-                    console.log(msg)
+                    this.$message.error(msg)
                 }
                  
             })
