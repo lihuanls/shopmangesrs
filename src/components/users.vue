@@ -129,6 +129,7 @@ export default {
             // console.log(res) 
             const { data, meta: { msg, status } } = res.data
             if (status === 200) {
+                // this.total = data.total
                 this.total = data.total
                 console.log(this.total)
                 this.list = data.users
