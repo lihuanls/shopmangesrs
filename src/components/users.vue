@@ -93,14 +93,14 @@ export default {
 
         }
     },
-    created() {
+    created() {   
         this.getlist()
     },
     methods: {
         // 添加功能-渲染添加组件
-        showAddTable() {
-          this.dialogFormVisibleAdd = true
-        },
+        // showAddTable() {
+        //   this.dialogFormVisibleAdd = true
+        // },
         // 清除搜索能容显示列表
         clearsearchuser() {
             this.getlist()
