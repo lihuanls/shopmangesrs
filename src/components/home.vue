@@ -4,7 +4,7 @@
     <el-row>
        <el-col :span="5"><img src="@/assets/logo.png" alt="图片加载失败"></el-col>
        <el-col :span="18" class="middle"><h2>电商后台管理系统</h2></el-col>
-       <el-col :span="1"><div class="grid-content bg-purple"><a href="#" class="logout">退出</a></div></el-col>
+       <el-col :span="1"><div class="grid-content bg-purple"><a @click.prevent="handleLoginOut()" href="#" class="logout">退出</a></div></el-col>
     </el-row>
   </el-header>
   <el-container>
@@ -88,7 +88,29 @@
 </template>
 
 <script>
-export default {};
+export default {
+  // 设置用户登录权限：根据token值监测登录状态：若登录过（有token值）直接渲染home.vue组件，若没有（没有正确的token值）回到login.vue完成登录
+  beforeMount() {
+    if(!localStorage.getItem("token")){
+        this.$router.push({
+          name:'login'
+        })
+    }
+  },
+  methods:{
+    // 退出功能
+    handleLoginOut() {
+      // 1.清除token值
+      localStorage.clear()
+      // 2.跳转到登录页面
+      this.$router.push({
+        name:'login'
+      });
+      // 提示
+      this.$message.warning('退出成功')
+    }
+  }
+};
 </script>
 
 <style>
