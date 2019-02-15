@@ -27,10 +27,16 @@ export default {
       // async,await简化代码，将异步操作看着像同步
     async handleLogin() {
       const res = await this.$http.post("login", this.formData)
-      const { data: { data:{token}, meta: { msg, status } } } = res
+      const {
+       data:{
+         data, 
+         meta: { msg, status } 
+       } 
+       
+       }  = res
       if (status === 200) {
           // 永久保存数据‘token’
-        localStorage.setItem('token',token)
+        localStorage.setItem('token',data.token)
         this.$router.push({
             name:'home'
         })
