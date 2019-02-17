@@ -8,6 +8,7 @@ import '@/assets/css/base.css'
 import router from './router'
 import moment from 'moment'
 import axios from 'axios'
+import cusBread from './components/cusBread.vue'
 axios.defaults.baseURL = 'http://localhost:8888/api/private/v1/'
 Vue.prototype.$http = axios
 // 使用element插件
@@ -20,6 +21,7 @@ Vue.filter('fmData',function (v) {
   return moment(v).format('YYYY-MM-DD')
 })
 
+Vue.component(cusBread.name, cusBread)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
