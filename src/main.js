@@ -7,12 +7,11 @@ import 'element-ui/lib/theme-chalk/index.css'
 import '@/assets/css/base.css'
 import router from './router'
 import moment from 'moment'
-import axios from 'axios'
+import http from './components/http'
 import cusBread from './components/cusBread.vue'
-axios.defaults.baseURL = 'http://localhost:8888/api/private/v1/'
-Vue.prototype.$http = axios
-// 使用element插件
+ 
 Vue.use(ElementUI)
+Vue.use(http)
 
 Vue.config.productionTip = false
 

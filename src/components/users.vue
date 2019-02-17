@@ -255,8 +255,7 @@ export default {
         },
         // 获取表格数据
         async getlist() {
-            const AUTH_TOKEN = localStorage.getItem("token")
-            this.$http.defaults.headers.common["Authorization"] = AUTH_TOKEN
+ 
             const res = await this.$http.get(`users?query=${this.query}&pagenum=${this.pagenum}&pagesize=${this.pagesize}`)
             // console.log(res) 
             const { data, meta: { msg, status } } = res.data
