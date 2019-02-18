@@ -11,7 +11,11 @@ HttpServer.install = function(Vue) {
            
           if (config.url !== 'login') {
             const AUTH_TOKEN = localStorage.getItem('token')
+<<<<<<< HEAD
             axios.defaults.headers.common['Authorization'] = AUTH_TOKEN
+=======
+            config.headers['Authorization'] = AUTH_TOKEN
+>>>>>>> dev-rights
           }
           
           return config
