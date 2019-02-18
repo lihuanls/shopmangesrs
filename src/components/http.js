@@ -8,14 +8,14 @@ HttpServer.install = function(Vue) {
     // 拦截器
     axios.interceptors.request.use(
         function(config) {
-           
+            
           if (config.url !== 'login') {
             const AUTH_TOKEN = localStorage.getItem('token')
-<<<<<<< HEAD
+
             axios.defaults.headers.common['Authorization'] = AUTH_TOKEN
-=======
+ 
             config.headers['Authorization'] = AUTH_TOKEN
->>>>>>> dev-rights
+ 
           }
           
           return config
