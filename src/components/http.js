@@ -13,7 +13,7 @@ HttpServer.install = function(Vue) {
             const AUTH_TOKEN = localStorage.getItem('token')
             config.headers['Authorization'] = AUTH_TOKEN
           }
-          
+          //Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjUwMCwicmlkIjozMCwiaWF0IjoxNTUwNTAwMjY3LCJleHAiOjE1NTA1ODY2Njd9.Cu9WQ6f_DNEnXJ1ccRWfed19LAnqR4M7knQfzdI5VY4
           return config
         },
         function(error) {
