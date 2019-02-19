@@ -17,7 +17,7 @@
       <el-aside class="aside" width="200px">
         <el-menu default-active="1" :router="true" :unique-opened="true">
           <!-- 用户管理 -->
-          <el-submenu :index="item1.order+''" v-for="(item1,i) in menus" :key="item1.id">
+          <el-submenu :index="item1.order+''" v-for="(item1,i) in list" :key="item1.id">
         <template slot="title">
           <i class="el-icon-location"></i>
           <span>{{item1.authName}}</span>
@@ -41,7 +41,7 @@
 export default {
   data() {
     return {
-      menus: []
+      list: []
     }
   },
   // 设置用户登录权限：根据token值监测登录状态：若登录过（有token值）直接渲染home.vue组件，若没有（没有正确的token值）回到login.vue完成登录
@@ -66,8 +66,8 @@ export default {
       console.log(localStorage.getItem("token"))
       const { meta: { msg, status }, data } = res.data
       if (status === 200) {
-        this.menus = data
-        console.log(this.menus)
+        this.list = data
+        // console.log(this.menus)
       }
     },
  
