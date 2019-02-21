@@ -7,6 +7,8 @@ import Home from '@/components/home.vue'
 import users from '@/components/users.vue'
 import rights from '@/components/rights.vue'
 import roles from '@/components/roles.vue'
+import goods from '@/components/goodslist.vue'
+import goodsAdd from '@/components/goodsAdd.vue'
 
 Vue.use(Router)
 
@@ -32,6 +34,14 @@ Vue.use(Router)
       name:'roles',
       path:'/roles',
       component:roles
+    },{
+      name:'goods',
+      path:'/goods',
+      component:goods
+    },{
+      name:'goodsAdd',
+      path:'/goodsAdd',
+      component: goodsAdd
     }] 
   }]
 })
