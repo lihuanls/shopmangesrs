@@ -9,6 +9,8 @@ import rights from '@/components/rights.vue'
 import roles from '@/components/roles.vue'
 import goods from '@/components/goodslist.vue'
 import goodsAdd from '@/components/goodsAdd.vue'
+ 
+
 
 Vue.use(Router)
 
@@ -42,7 +44,7 @@ Vue.use(Router)
       name:'goodsAdd',
       path:'/goodsAdd',
       component: goodsAdd
-    }] 
+    } ] 
   }]
 })
 
