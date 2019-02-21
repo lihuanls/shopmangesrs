@@ -9,6 +9,9 @@ import rights from '@/components/rights.vue'
 import roles from '@/components/roles.vue'
 import goods from '@/components/goodslist.vue'
 import goodsAdd from '@/components/goodsAdd.vue'
+import cateparams from '@/components/cateparams.vue'
+import goodscate from '@/components/goodscate.vue'
+
 
 Vue.use(Router)
 
@@ -42,6 +45,14 @@ Vue.use(Router)
       name:'goodsAdd',
       path:'/goodsAdd',
       component: goodsAdd
+    },{
+      name:'cateparams',
+      path:'/params',
+      component: cateparams
+    },{
+      name:'goodscate',
+      path:'/categories',
+      component: goodscate
     }] 
   }]
 })
