@@ -9,12 +9,12 @@ import rights from '@/components/rights.vue'
 import roles from '@/components/roles.vue'
 import goods from '@/components/goodslist.vue'
 import goodsAdd from '@/components/goodsAdd.vue'
-<<<<<<< HEAD
+
  
-=======
+
 import cateparams from '@/components/cateparams.vue'
 import goodscate from '@/components/goodscate.vue'
->>>>>>> dev-goods
+
 
 
 Vue.use(Router)
@@ -49,9 +49,9 @@ Vue.use(Router)
       name:'goodsAdd',
       path:'/goodsAdd',
       component: goodsAdd
-<<<<<<< HEAD
-    } ] 
-=======
+
+    }] 
+
     },{
       name:'cateparams',
       path:'/params',
@@ -61,8 +61,6 @@ Vue.use(Router)
       path:'/categories',
       component: goodscate
     }] 
->>>>>>> dev-goods
-  }]
 })
 
 
