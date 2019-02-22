@@ -2,17 +2,19 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import {Message} from 'element-ui'
 
-import Login from '@/components/login.vue'
-import Home from '@/components/home.vue'
-import users from '@/components/users.vue'
-import rights from '@/components/rights.vue'
-import roles from '@/components/roles.vue'
-import goods from '@/components/goodslist.vue'
-import goodsAdd from '@/components/goodsAdd.vue'
-import cateparams from '@/components/cateparams.vue'
-import goodscate from '@/components/goodscate.vue'
-import order from '@/components/order.vue'
-import report from '@/components/reports.vue'
+ 
+
+const  Login = () => import('@/components/login.vue')
+const  Home = () => import('import(@/components/home.vue')
+const  users = () => import('@/components/users.vue')
+const  rights = () => import ('@/components/rights.vue')
+const  roles = () => import  ('@/components/roles.vue')
+const  goods = () => import ('@/components/goodslist.vue')
+const  goodsAdd =() => import ('@/components/goodsAdd.vue')
+const  cateparams = () => import ('@/components/cateparams.vue')
+const  goodscate = () => import ('@/components/goodscate.vue')
+const  order = () => import ('@/components/order.vue')
+const  report =() => import ('@/components/reports.vue')
 
 Vue.use(Router)
 
